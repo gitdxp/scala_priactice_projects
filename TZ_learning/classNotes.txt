@@ -33,6 +33,9 @@ Spark 2.x 管理与开发
             var变量  val常量
             
         5.函数（重要）：头等公民
+            1.内置函数   max(10,20)     error   can't find max()
+                        import scala.math._     max(100,200)  correct
+            2.自定义函数
         6.条件判断 ，循环，比较灵活
         7.函数的参数
         8.懒值
