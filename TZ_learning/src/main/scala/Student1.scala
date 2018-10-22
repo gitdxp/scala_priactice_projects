@@ -20,5 +20,7 @@ object Student1{
     s1.setStuName("Mary")
     s1.setStuAge(20)
     println(s1.getStuName()+"\t"+s1.getStuAge())
+
+    println(s1.stuName+"\t"+s1.stuAge+"get");
   }
 }

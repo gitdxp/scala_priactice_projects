@@ -1,0 +1,42 @@
+Redis 的代理分片
+
+Scala语言基础，
+    1.函数参数值的求值策略
+        1.call by value    对函数的实参求值，仅求一次
+           def test1(x:Int,y:Int) :Int= x + x
+        2.call by name   函数的实参每次在函数体内部被调用到的时候，都会求值
+          def test2(x:=> Int , y:=> Int) : Int = x + x
+    2.函数的参数 ：
+        1.默认参数
+            def fun1(str:string = "Tom") = "hello " + str
+        2.代名参数
+            def fun2(str:String = "good",str1:String  = "morning" ,age:Int = 20)
+            =  str + str1 + age
+            fun2(age = 23)
+        3.可变参数
+          def sum(args:Int*) = {
+            var result = 0
+            for(arg <- args) result += arg
+            result
+            }
+         sum(2,4,4,5)
+
+懒值 ： lazy值   如果一个变量是lazy,他的初始化会被推迟，直到第一次使用他的时候
+        lazy var x:Int = y + 20
+        x
+        例子：读一个文件，一个存在，一个不存在
+异常：Exception  类似 java  也是throw new Exception("some error")
+    java语言的异常处理机制是什么：
+        try catch finally
+        向上处理机制   如果我没有处理异常，就向上抛，由调用者处理异常，如果
+        调用者也没有处理异常，就接着向上抛，如果所有调用者都没有处理异常
+        这个异常最终会由java 虚拟机处理异常
+scala数组
+    定长，变长数组
+
+    映射 就是一个<key,value>的Map集合
+
+    元组：tuple  不同类型的值的集合
+属性的get  set方法
+
+

@@ -37,5 +37,6 @@ scala数组
     映射 就是一个<key,value>的Map集合
 
     元组：tuple  不同类型的值的集合
+属性的get  set方法
 
 

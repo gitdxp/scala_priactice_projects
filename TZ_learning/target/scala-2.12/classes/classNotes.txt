@@ -1,0 +1,84 @@
+Spark 2.x 管理与开发
+第一部分：Scala编程语言（看成：java语言的升级版）
+    前提：先装java 的 jdk,需要
+    一章：Scala语言基础
+        1.简介Scala
+            *面向对象
+            *函数式编程
+            *基于JVM
+        2.安装和配置，运行环境，
+            *前提，先安装JDK
+            *安装Scala，下载
+                CMD:
+                    :paste   CRTL+D
+                IDEA:
+                    安装插件，SBT(联网，有点慢)
+                eclipse
+        3.数据的类型：基本数据类型
+          注意：在Scala中任何数据都是对象，1也是对象，就会有方法，就会有函数
+            1.数值类型：123445 Byte,Short ,Int,Long,Float,Double
+                Byte:8位的有符号数字：-128~127
+                Short:16位的有符号数字
+            2.字符串：字符和字符串
+                在scala对字符串有一个特殊操作：插值操作
+                val s1 = "hello world"
+                s"My name is ${s1}"     //前面加上s，意味着有插值操作
+            3.Uint类型
+                相当于java当中的void
+                val f = ()   相当于定义了一个函数，把函数的值 交给一个变量f来保存
+            4.Nothing类型：一般来说，表示执行的过程中产生了Exception
+                举例：定义函数  def
+                    def myfunction = throw Exception("some error")
+        4.变量和常量
+            var变量  val常量
+            
+        5.函数（重要）：头等公民
+            1.内置函数   max(10,20)     error   can't find max()
+                        import scala.math._     max(100,200)  correct
+            2.自定义函数
+        6.条件判断 ，循环，比较灵活
+        7.函数的参数
+        8.懒值
+        9.异常：类似java
+        10.数组，映射，元组
+    二章：Scala面向对象
+        1.基本概念：多态，封闭，继承
+        2.类的定义
+        3.属性的get,set方法
+        4.内部类，
+        5.类的构造器（主构造器，辅助构造器）
+        6.Object对象：相当于java中的static
+        7.apply方法：在创建类的对象时候，可以不写new关键字  eg.  new A  --> A
+        8.继承：extends
+        9.trait(特质）：相当于java接口
+        10.包，包对象
+    三章：Scala函数式编程（重要）
+        1.Scala函数：相当于方法
+        2.匿名函数
+        3.高阶函数：带函数参数的函数
+                    某个函数的参数接收的是一个函数
+        4.闭包，柯里化
+        5.Scala函数式编程举例
+    四章：Scala的集合
+        1.可变集合，不可变集合
+        2.列表
+        3.序列
+        4.Set
+        5.模式匹配：相当于java: instanceof
+        6.样本类: case class
+    五章：Scala语言的高级特性（泛型）
+        1.泛型类
+        2.泛型函数
+        3.泛型的上界和下界
+        4.泛型的视图界定
+        5.协变和逆变
+        6.隐式转换  implicit
+        7.隐式参数
+        8.隐式类
+    六章：Actor编程（不讲了，版本抛弃 ）
+第二部分：Spark Core（内核，相当于MapReduce）
+
+第三部分：Spark SQL  （相当于：Hive,HDFS上的数据仓库tuple bag field，底层依赖：Spark Core(RDD)）
+
+第四部分：Spark Streaming（相当于：Storm，流式计算引擎，底层依赖：Spark Core(RDD)）
+
